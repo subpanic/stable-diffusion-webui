@@ -10,10 +10,10 @@
 #clone_dir="stable-diffusion-webui"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-#export COMMANDLINE_ARGS=""
+export COMMANDLINE_ARGS="--xformers --listen --api --ckptfix --port 6500 --config /store/sd/models/downloaded/v2-1_768-ema-pruned.yaml --device-id 0 --enable-insecure-extension-access"
 
 # python3 executable
-#python_cmd="python3"
+python_cmd="python"
 
 # git executable
 #export GIT="git"

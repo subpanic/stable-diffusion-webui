@@ -21,6 +21,9 @@ def process_batch(p, input_dir, output_dir, inpaint_mask_dir, args):
     processing.fix_seed(p)
 
     images = shared.listfiles(input_dir)
+    
+    # filter images to only include jpg, jpeg, and png images
+    images = [image for image in images if image.lower().endswith(('.jpg', '.jpeg', '.png'))]
 
     is_inpaint_batch = False
     if inpaint_mask_dir:
